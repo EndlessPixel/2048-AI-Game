@@ -10,17 +10,17 @@
 /* ----------  配置区  ---------- */
 const size = 4;
 const WEIGHT_MATRIX = [
-    [100, 80, 50, 30],
-    [80, 60, 30, 10],
-    [50, 30, 20, 5],
-    [30, 10, 5, 1]
+  [ 65536, 32768, 16384, 8192 ],
+  [  256,   512,  1024, 4096 ],
+  [  128,    64,    32, 2048 ],
+  [    1,     2,     4,    8 ]
 ];
 let board = [];
 let score = 0;
 let maxTile = 1;
 let aiInterval = null;
 let aiSpeed = 100;          // ms
-const DEPTH = 3;            // 搜索深度（可调）
+const DEPTH = 5;            // 搜索深度（可调）
 
 /* ----------  工具函数  ---------- */
 const $ = id => document.getElementById(id);
@@ -268,3 +268,4 @@ function setSpeed(sp) {
 /* ----------  启动  ---------- */
 
 initGame();
+
