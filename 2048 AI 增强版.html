@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 AI 增强版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2048 AI 增强版</h1>
+        <div class="score">得分: <span id="score">0</span> | 最高块: <span id="maxTile">1</span></div>
+        <div class="controls">
+            <button class="btn" onclick="startAI()">开始AI</button>
+            <button class="btn" onclick="stopAI()">停止AI</button>
+            <button class="btn" onclick="initGame()">重新开始</button>
+            <button class="btn" onclick="setSpeed('fast')">快速</button>
+            <button class="btn" onclick="setSpeed('normal')">普通</button>
+            <button class="btn" onclick="setSpeed('slow')">慢速</button>
+        </div>
+        <div class="game-board">
+            <div class="grid" id="grid"></div>
+            <div class="game-over" id="gameOver">
+                <div class="game-over-text">游戏结束!</div>
+                <div>最终得分: <span id="finalScore">0</span></div>
+                <div>最高块: <span id="finalMaxTile">1</span></div>
+                <button class="restart-btn" onclick="initGame()">重新开始</button>
+            </div>
+        </div>
+        <div class="info">
+            增强版AI：深度搜索 + 智能评估 + 角块优先策略
+        </div>
+        <div class="ai-status" id="aiStatus">状态: 未运行</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
