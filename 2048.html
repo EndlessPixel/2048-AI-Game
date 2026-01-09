@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2048</h1>
+        <div class="score">得分: <span id="score">0</span></div>
+        <div class="game-board">
+            <div class="grid" id="grid"></div>
+            <div class="game-over" id="gameOver">
+                <div class="game-over-text">游戏结束!</div>
+                <button class="restart-btn" onclick="initGame()">重新开始</button>
+            </div>
+        </div>
+        <div class="instructions">
+            使用方向键 ↑↓←→ 移动方块
+        </div>
+    </div>
+
+    <script src="2script.js"></script>
+</body>
+</html>
